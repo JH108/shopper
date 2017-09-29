@@ -28,11 +28,11 @@ class MainVC: UIViewController {
         priceTxt.inputAccessoryView = calcBtn
         
         resultLbl.isHidden = true
-        hoursLbl.isHidded = true
+        hoursLbl.isHidden = true
     }
 
     @objc func calculate() {
-        if let wageInfo = wageInfo.text, let priceInfo = priceTxt.text {
+        if let wageInfo = wageTxt.text, let priceInfo = priceTxt.text {
             if let wage = Double(wageInfo), let price = Double(priceInfo) {
                 view.endEditing(true)
                 resultLbl.isHidden = false
