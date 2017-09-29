@@ -8,10 +8,12 @@
 
 import UIKit
 
-class mainVC: UIViewController {
+class MainVC: UIViewController {
 
     @IBOutlet weak var wageTxt: CurrencyTextField!
     @IBOutlet weak var priceTxt: CurrencyTextField!
+    @IBOutlet weak var hoursLbl: UILabel!
+    @IBOutlet weak var resultLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,16 +22,32 @@ class mainVC: UIViewController {
         calcBtn.backgroundColor = #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1)
         calcBtn.setTitle("Calculate", for: .normal)
         calcBtn.setTitleColor(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), for: .normal)
-        calcBtn.addTarget(self, action: #selector(mainVC.calculate), for: .touchUpInside)
+        calcBtn.addTarget(self, action: #selector(MainVC.calculate), for: .touchUpInside)
         
         wageTxt.inputAccessoryView = calcBtn
         priceTxt.inputAccessoryView = calcBtn
+        
+        resultLbl.isHidden = true
+        hoursLbl.isHidded = true
     }
 
     @objc func calculate() {
-        
+        if let wageInfo = wageInfo.text, let priceInfo = priceTxt.text {
+            if let wage = Double(wageInfo), let price = Double(priceInfo) {
+                view.endEditing(true)
+                resultLbl.isHidden = false
+                hoursLbl.isHidden = false
+                resultLbl.text = "\(Wage.getHours(forWage: wage, andPrice: price))"
+            }
+        }
     }
 
-
+    @IBAction func clearCalcTapped(_ sender: Any) {
+        resultLbl.isHidden = true
+        hoursLbl.isHidden = true
+        wageTxt.text = ""
+        priceTxt.text = ""
+    }
+    
 }
 

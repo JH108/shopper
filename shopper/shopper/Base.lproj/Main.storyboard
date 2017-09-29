@@ -8,11 +8,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="mainVC" customModule="shopper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="shopper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -46,24 +52,57 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P07-lc-cqP">
+                                <rect key="frame" x="161" y="336" width="53.5" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="250" id="E30-yA-vOt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="48"/>
+                                <color key="textColor" red="0.99780243046483053" green="0.98709883012154409" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cNI-1b-QgJ">
+                                <rect key="frame" x="107" y="604" width="160" height="43"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="22"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" red="0.99780243049999995" green="0.98709883009999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalcTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M4B-9G-Hl4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZrV-Xb-Hcb">
+                                <rect key="frame" x="162.5" y="417" width="49.5" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <color key="textColor" red="0.99780243049999995" green="0.98709883009999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="P07-lc-cqP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0k1-Mx-Rsv"/>
                             <constraint firstItem="c0G-f3-ssF" firstAttribute="top" secondItem="ytB-El-jy3" secondAttribute="bottom" constant="60" id="3kv-co-lc7"/>
                             <constraint firstItem="c0G-f3-ssF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4mI-iF-TMu"/>
+                            <constraint firstItem="ZrV-Xb-Hcb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6VW-N2-X4o"/>
+                            <constraint firstItem="P07-lc-cqP" firstAttribute="top" secondItem="c0G-f3-ssF" secondAttribute="bottom" constant="46" id="Lng-pp-kHT"/>
                             <constraint firstItem="ing-vU-JI9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Nh3-xg-C3Z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cNI-1b-QgJ" secondAttribute="bottom" constant="20" id="PZM-fH-9Cf"/>
                             <constraint firstItem="hJM-QT-AnN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="XPB-I7-RBQ"/>
+                            <constraint firstItem="ZrV-Xb-Hcb" firstAttribute="top" secondItem="P07-lc-cqP" secondAttribute="bottom" constant="15" id="fhl-Rm-h2Z"/>
                             <constraint firstItem="hJM-QT-AnN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jHs-20-6rg"/>
                             <constraint firstItem="ytB-El-jy3" firstAttribute="top" secondItem="hJM-QT-AnN" secondAttribute="bottom" constant="50" id="lCZ-wo-S9o"/>
                             <constraint firstItem="ing-vU-JI9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rcg-db-vvT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ing-vU-JI9" secondAttribute="trailing" id="rsG-eg-E36"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ing-vU-JI9" secondAttribute="bottom" id="s3E-m0-a1N"/>
+                            <constraint firstItem="cNI-1b-QgJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s6g-2U-Tu5"/>
                             <constraint firstItem="ytB-El-jy3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zII-KX-alj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hoursLbl" destination="ZrV-Xb-Hcb" id="wRz-Qz-qtQ"/>
                         <outlet property="priceTxt" destination="c0G-f3-ssF" id="nvx-ub-xJR"/>
+                        <outlet property="resultLbl" destination="ZrV-Xb-Hcb" id="WMU-Ff-hAG"/>
                         <outlet property="wageTxt" destination="ytB-El-jy3" id="GYl-QM-4VX"/>
                     </connections>
                 </viewController>

@@ -33,4 +33,10 @@ class shopperTests: XCTestCase {
         }
     }
     
+    func testHours() {
+        XCTAssert(Wage.getHours(forWage: 15, andPrice: 60) == 4)
+        XCTAssert(Wage.getHours(forWage: 15, andPrice: 61) == 5)
+        XCTAssert(Wage.getHours(forWage: 100, andPrice: 60) == 1)
+    }
+    
 }

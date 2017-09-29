@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		886213091F7EB2A1004FD5B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886213081F7EB2A1004FD5B4 /* AppDelegate.swift */; };
-		8862130B1F7EB2A1004FD5B4 /* mainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8862130A1F7EB2A1004FD5B4 /* mainVC.swift */; };
+		8862130B1F7EB2A1004FD5B4 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8862130A1F7EB2A1004FD5B4 /* MainVC.swift */; };
 		8862130E1F7EB2A1004FD5B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8862130C1F7EB2A1004FD5B4 /* Main.storyboard */; };
 		886213101F7EB2A1004FD5B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8862130F1F7EB2A1004FD5B4 /* Assets.xcassets */; };
 		886213131F7EB2A1004FD5B4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 886213111F7EB2A1004FD5B4 /* LaunchScreen.storyboard */; };
 		8862131E1F7EB2A1004FD5B4 /* shopperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8862131D1F7EB2A1004FD5B4 /* shopperTests.swift */; };
 		886213291F7EB2A1004FD5B4 /* shopperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886213281F7EB2A1004FD5B4 /* shopperUITests.swift */; };
 		8862133A1F7EB46D004FD5B4 /* CurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886213391F7EB46D004FD5B4 /* CurrencyTextField.swift */; };
+		8862133C1F7ECE6C004FD5B4 /* wage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8862133B1F7ECE6C004FD5B4 /* wage.swift */; };
+		8862133D1F7ECF3F004FD5B4 /* wage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8862133B1F7ECE6C004FD5B4 /* wage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +39,7 @@
 /* Begin PBXFileReference section */
 		886213051F7EB2A1004FD5B4 /* shopper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shopper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		886213081F7EB2A1004FD5B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8862130A1F7EB2A1004FD5B4 /* mainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainVC.swift; sourceTree = "<group>"; };
+		8862130A1F7EB2A1004FD5B4 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		8862130D1F7EB2A1004FD5B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8862130F1F7EB2A1004FD5B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		886213121F7EB2A1004FD5B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +51,7 @@
 		886213281F7EB2A1004FD5B4 /* shopperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shopperUITests.swift; sourceTree = "<group>"; };
 		8862132A1F7EB2A1004FD5B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		886213391F7EB46D004FD5B4 /* CurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTextField.swift; sourceTree = "<group>"; };
+		8862133B1F7ECE6C004FD5B4 /* wage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +135,7 @@
 		886213361F7EB34F004FD5B4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8862130A1F7EB2A1004FD5B4 /* mainVC.swift */,
+				8862130A1F7EB2A1004FD5B4 /* MainVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 		886213371F7EB35A004FD5B4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8862133B1F7ECE6C004FD5B4 /* wage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,7 +291,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8862133A1F7EB46D004FD5B4 /* CurrencyTextField.swift in Sources */,
-				8862130B1F7EB2A1004FD5B4 /* mainVC.swift in Sources */,
+				8862133C1F7ECE6C004FD5B4 /* wage.swift in Sources */,
+				8862130B1F7EB2A1004FD5B4 /* MainVC.swift in Sources */,
 				886213091F7EB2A1004FD5B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8862131E1F7EB2A1004FD5B4 /* shopperTests.swift in Sources */,
+				8862133D1F7ECF3F004FD5B4 /* wage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
